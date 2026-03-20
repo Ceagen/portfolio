@@ -1,0 +1,265 @@
+{% extends 'base.html' %}
+{% block body %}
+    <div class="parentContainer">
+        <div class="index-vid">
+            <div class="index-vid-container">
+                <video autoplay muted loop class="vid">
+                    <source src="{{ url_for('static', filename='/image/Pixel_Art_Car_Driving_A_Highway_Loop_preview_2051455.mp4') }}" type="video/mp4">
+                    
+                </video>
+                <div class="container-social-media d-none" id="container-social-media">
+                    <div class="social-media-div"><div class="LinkedIn" id="LinkedIn"><i class="fa-brands fa-linkedin"></i></div><div class="arrow-linkedIn  d-none" id="linkedIn-arrow"><img class="img-selector" src="{{ url_for('static', filename='/image/skip.png') }}" alt="skip.png"></div></div>
+                    <div class="social-media-div"><div class="GitHub" id="GitHub"><i class="fa-brands fa-square-github"></i></div><div class="arrow-github  d-none" id="GitHub-arrow"><img class="img-selector" src="{{ url_for('static', filename='/image/skip.png') }}" alt="skip.png"></div></div>
+                    <div class="social-media-div"><div class="GitLab" id="GitLab"><i class="fa-brands fa-square-gitlab"></i></div><div class="arrow-gitlab  d-none" id="GitLab-arrow"><img class="img-selector" src="{{ url_for('static', filename='/image/skip.png') }}" alt="skip.png"></div></div>
+                </div>
+                <div class="index-vid-intro">
+                    <h3 class="intro-header" data-text="SONO Nana Yaw Antwi">
+                        SONO Nana Yaw Antwi
+                    </h3>
+                    <div class="scanlines"></div>
+                </div>  
+            </div>
+        </div>
+        <section class="about-me-section">
+            <div class="skills-header">
+                About Me
+            </div>
+            <div class="container-about-me">
+                <div class="about-me">
+                    <p>
+                        I am <strong>SONO Nana Yaw Antwi</strong>,
+                        i am x
+                    </p>
+                    <p>
+                        I first found out about web developpement from one of my teachers 
+                        and i found his course fun and entertaining, ever since i've been 
+                        hooked on learning about coding.
+                    </p>
+                    <p>
+                        My moto in life, "<strong>Learn the necessary and the useless stuffs, if one fails turn to the other</strong>- SONO Nana"
+                        With said moto i aim on being the absolute best at every and anything i will be tasked
+                        with.
+                    </p>
+                    <p>
+                        If in need of my skills, i am ready to take on a full contract or can be enlisted as a Freelancer,
+                        in either cases i will strive to be a great addition to either the work force.
+                        Click on the button below if you wish to contact me for further informations, you can also
+                        downlaod my résumé with the button below.
+                    </p>
+                    <div class="btn-holder">
+                        <div class="button--simple">
+                            <button class="contact" id="contact">Contact</button>
+                        </div>
+                        <label class="label">
+                          <input type="checkbox" class="input" />
+                          <span class="circle"
+                            ><svg
+                              class="icon"
+                              aria-hidden="true"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                            >
+                              <path
+                                stroke="currentColor"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="1.5"
+                                d="M12 19V5m0 14-4-4m4 4 4-4"
+                              ></path>
+                            </svg>
+                            <div class="square"></div>
+                          </span>
+                          <p class="title">resume</p>
+                          <p class="title">Open</p>
+                        </label>
+                    </div>
+                </div>
+                <div class="skills">
+                    <div><h3 class="intro-skills">My Skills</h3></div>
+                    <div class="soft-skills">
+                        <div class="group">
+                            <div class="card"><i class="fa-brands fa-html5 languageLogo"></i></div>
+                            <div class="card"><i class="fa-brands fa-css3-alt languageLogo"></i></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/javascript.png') }}" alt="Javascript"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/python.png') }}" alt="Python"></div>
+                            <div class="card"><i class="fa-brands fa-java languageLogo"></i></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/flask.png') }}" alt="Flask"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/c#.png') }}" alt="C#"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/sql.png') }}" alt="My sql"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/fabrics.png') }}" alt="fabrics.js"></div>
+                            <div class="card"><i class="fa-brands fa-php languageLogoPhp"></i></div>
+                        </div>
+                        <div aria-hidden class="group">
+                            <div class="card"><i class="fa-brands fa-html5 languageLogo"></i></div>
+                            <div class="card"><i class="fa-brands fa-css3-alt languageLogo"></i></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/javascript.png') }}" alt="Javascript"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/python.png') }}" alt="Python"></div>
+                            <div class="card"><i class="fa-brands fa-java languageLogo"></i></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/flask.png') }}" alt="Flask"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/c#.png') }}" alt="C#"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/sql.png') }}" alt="My sql"></div>
+                            <div class="card"><img src="{{ url_for('static', filename='/image/fabrics.png') }}" alt="fabrics.js"></div>
+                            <div class="card"><i class="fa-brands fa-php languageLogoPhp"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="project-section">
+            <div class="intro-project">My Projects</div>
+            <div class="container-project">
+                <div class="card-project">
+                    <div><h3 class="card-title">Slots</h3></div>
+                    <div class="card-description">
+                        <img class="card-img" src="{{ url_for('static', filename='image/slots-exemple.png') }}" alt="Slot exemples">
+                        <div class="description">
+                            <p>
+                                This project of mine was made with Python, its an emulation of a slot Machine
+                                yes i litteraly wrote a script to gamble, was it worth while? absolutely i'll
+                                link the source code to my git hub here.
+                            </p>
+                            <p class="click-me" id="click-me" data-type="slots"> <strong>Click Me</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div><h3 class="card-title">GSB</h3></div>
+                    <div class="card-description">
+                        <img class="card-img" src="{{ url_for('static', filename='image/gsb.png') }}" alt="gsb">
+                        <div class="description">
+                            <p>
+                                This is a school project i made with classmates, the purpose? to create a dynamic
+                                website with the incorporation of a database to handle the creation, modify and delete 
+                                of users.
+                            </p>
+                            <p class="click-me" id="click-me" data-type="gsb"> <strong>Click Me</strong></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-project">
+                    <div><h3 class="card-title">Calculator</h3></div>
+                    <div class="card-description">
+                        <img class="card-img" src="{{ url_for('static', filename='image/calculator.png') }}" alt="calculator">
+                        <div class="description">
+                            <p>
+                                Honestly speaking i made this project back in my beginner days when i was learnign javascript
+                                was still fun to do.
+                            </p>
+                            <p class="click-me" id="click-me" data-type="calculator"> <strong>Click Me</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="certification-section">
+            <div class="container-certification">
+                <h1 class="parcours-title">Mes certification</h1>
+                <div class="timeline">
+                    <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2024-present</span>
+                        <h3>BTS SIO – Option SLAM</h3>
+                        <p class="place">Établissement à renseigner · Toulouse</p>
+                        <p>
+                            BTS: <button class="certification-button click-me" data-type="enCours">En cours...</button>
+                        </p>
+                        <p>
+                            certification Pix: <button class="certification-button click-me" data-type="pix-2024">2024</button> => <button class="certification-button click-me" data-type="pix-2026">2026</button>
+                        </p>
+                    </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2020 - 2023</span>
+                        <h3>Baccalauréat STMG</h3>
+                        <p class="place">Lycée Ozenne · Toulouse</p>
+                        <p>
+                            <a href=""></a>
+                        </p>
+                    </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2019 - 2021</span>
+                        <h3>Brevet des collèges</h3>
+                        <p class="place">Collège Rosa Parks · Toulouse</p>
+                        <p>
+                        Obtention du brevet.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="parcours-section">
+            <p class="subtitle">MON HISTOIRE</p>
+            <h1 class="parcours-title">Parcours scolaire</h1>
+            <div class="parcours-layout">
+                <div class="timeline">
+                    <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2023 - PRÉSENT</span>
+                        <h3>BTS SIO – Option SLAM</h3>
+                        <p class="place">Établissement à renseigner · Toulouse</p>
+                        <p>
+                        Formation en Solutions Logicielles et Applications Métiers, developpement web, conception de base de donnée ainsi qu'à la
+                        création d'un base de donnée.
+                        </p>
+                    </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2020 - 2023</span>
+                        <h3>Baccalauréat STMG</h3>
+                        <p class="place">Lycée Ozenne · Toulouse</p>
+                        <p>
+                        Sciences et technologies du Management et de la Gestion.
+                        </p>
+                    </div>
+                    </div>
+                
+                    <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="date">2019 - 2021</span>
+                        <h3>Brevet des collèges</h3>
+                        <p class="place">Collège Rosa Parks · Toulouse</p>
+                        <p>
+                        Obtention du brevet.
+                        </p>
+                    </div>
+                    </div>
+                </div>
+                <div class="character-container">
+                    <img id="runUp" class="pixel-caracter runUp" src="{{ url_for('static', filename='image/runUp.gif') }}" alt="">
+                    <img id="runDown" class="pixel-caracter runDown" src="{{ url_for('static', filename='image/runDown.gif') }}" alt="">
+                    <img id="idle" class="pixel-caracter idle active" src="{{ url_for('static', filename='image/idle.gif') }}" alt="">
+                </div>
+            </div>
+        </section>
+        <section class="veille-section">
+            <div class="container-veille">
+
+            </div>
+        </section>
+        <section class="addtion-section">
+            <div class="container-addition">
+                
+            </div>
+        </section>
+        <section class="contact-section">
+            <div class="container-contact">
+                
+            </div>
+        </section>
+    </div>
+{% endblock %}

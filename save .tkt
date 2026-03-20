@@ -1,0 +1,35 @@
+@keyframes autoRotateAnimation {
+    0% {
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    10% {
+        opacity: 0.2;
+        transform: translateX(-80vw);
+    }
+    30% {
+        opacity: 0.6;
+        transform: translateX(-40vw);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(0vw);
+    }
+    70% {
+        opacity: 1;
+        transform: translateX(50vw);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(100vw);
+    }
+}
+
+.autoRotate{
+    width: 60px;
+    position: absolute;
+    left: -34%;
+    animation: autoRotateAnimation linear;
+    animation-timeline: view();
+    color: white;
+}
