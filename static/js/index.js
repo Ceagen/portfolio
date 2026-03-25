@@ -160,34 +160,38 @@ document.addEventListener("DOMContentLoaded", ()=>{
           }, 150); // adjust delay if needed
         });
     
-        const section = document.querySelector(".parcours-section");
-    
-        window.addEventListener("scroll", () => {
-        
-          const rect = section.getBoundingClientRect();
-          const inView = rect.top < window.innerHeight && rect.bottom > 0;
-        
-          if(!inView) return; // stop logic outside section
-        
-          const currentScroll = window.scrollY;
-        
-          if(currentScroll > lastScroll){
-            show(runDown);
-          } else if(currentScroll < lastScroll){
-            show(runUp);
-          }
-      
-          lastScroll = currentScroll;
-      
-          clearTimeout(timeout);
-          timeout = setTimeout(() => {
-            show(idle);
-          }, 150);
-        });
     
         function show(state){
           [runUp, runDown, idle].forEach(el => el.classList.remove("active"));
           state.classList.add("active");
         }
+
+        const container = document.querySelector('.container-parcou-certif');
+        const characterContainer = document.getElementById('character-container')
+        if (!container || !characterContainer) return
+        window.addEventListener('scroll', () => {
+          const containerRect = container.getBoundingClientRect();
+          const containerTop = containerRect.top + window.scrollY;
+          const containerBottom = containerTop + containerRect.height;
+          const scrollPosition = window.scrollY;
+        
+          // Only move if inside the section
+          if (scrollPosition >= containerTop && scrollPosition <= containerBottom) {
+            const progress = scrollPosition - containerTop;
+            const maxProgress = containerRect.height;
+            const moveRatio = progress / maxProgress;
+        
+            // Adjust the multiplier for speed
+              const speed = 1.8; // try 1.5, 2, 3...
+              const moveDistance = moveRatio * 1700 * speed; // 1700px is the max distance to move
+              characterContainer.style.transform = `translateY(${moveDistance}px)`;
+          } else if (scrollPosition < containerTop) {
+            // Reset to start if above section
+            characterContainer.style.transform = `translateY(0)`;
+          } else {
+            // Stop at bottom if past section
+            characterContainer.style.transform = `translateY(1700px)`;
+          }
+        });
     }
 })
